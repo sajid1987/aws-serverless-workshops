@@ -100,29 +100,24 @@ Once you've chosen a region, you should deploy all of the resources for this wor
 
 Congratulations!  You have successfully create a serverless web service project using CodeStar.  In the next section, you will use a Git client to clone the repository to your workstation.
 
-## Clone CodeCommit Git Repository
+## Launch AWS Cloud9 IDE and Verify if CodeCommit Git Repository Has Been Cloned
 
-**Goal:** From the CodeStar dashboard for the `uni-api` project, find the CodeCommit instructions to clone the Git repository to your local workstation.
 
 <details>
-<summary><strong>HOW TO clone the CodeCommit git repository (expand for details)</strong></summary><p>
+<summary><strong>HOW TO Launch AWS Cloud9 (expand for details)</strong></summary><p>
 
-1. In the upper right corner of the CodeStar project dashboard browser window, click the **Connect Tools** button.
+1. In the upper right corner of the CodeStar project dashboard browser window, click the **Start Codings** button.
 
-    ![CodeStar 11](images/codestar-11.png)
+    ![CodeStar 9-2](images/codestar-9-2.png)
     
-    You can also click the **Connect** button in the bottom left corner of the **Commit history** project tile.
-    
-    ![CodeStar 11](images/codestar-11b.png)
-    
-1. You can select instructions to clone the CodeCommit respository using **Visual Studio**, **Eclipse**, or **Command line tools**.  Click **See instructions** for instructions for cloning to **macOS**, **Windows**, and **Linux** operating systems.  Complete the instructions to clone the CodeCommit Git repository to your local workstation.
+1. Above step will open AWS Cloud9 IDE in a new browser window. Left pane will be the git repo directory structure, right top pane will be the editor and right bottom pane will be the command line terminal. Please see below image for details.
 
-    ![CodeStar 12](images/codestar-12.png)
+    ![CodeStar 9-3](images/codestar-9-3.png)
 
 </p></details>
 <p>
 
-Congratulations!  You have successfully cloned the `uni-api` project to your local workstation.  In future modules, you will use this local version to commit changes to the source code, push them to the project Git repository, and trigger automatic execution of the project's continuous delivery pipeline.
+Congratulations!  You have successfully cloned the `uni-api` project to your AWS Cloud9 IDE.  In future modules, you will use this version to commit changes to the source code, push them to the project Git repository, and trigger automatic execution of the project's continuous delivery pipeline.
 
 
 
