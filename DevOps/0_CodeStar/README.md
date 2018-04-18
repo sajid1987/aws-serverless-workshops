@@ -72,13 +72,14 @@ Once you've chosen a region, you should deploy all of the resources for this wor
 
     ![CodeStar 6](images/codestar-6.png)
 
-1. The next screen asks how you will edit your project code.  You will come back to this configuration later in this module and can click the **Skip** button in the lower right corner of the browser window to proceed.
+1. The next screen asks how you will edit your project code.  Select AWS Cloud9 and then click **Next** button in the lower right corner of the browser window to proceed.
 
-    ![CodeStar 7](images/codestar-7.png)
+    ![CodeStar 7-1](images/codestar-7-1.png)
 
-1. The screen below is your CodeStar project dashboard.  After creating a new project, there will be a short delay as CodeStar provisions the resources for CodeCommit, CodeBuild, CodePipeline, and additional resources related to your project template, Lambda functions in this case.  When the progress bar in the upper right of the browser window reaches 100% complete, the provisioning phase of project creation is complete.
+1. The next screen will allow you to chose the detils for your IDE instance. Leave all options to default except for 'Shut down environment', change that to 'After 4 hours' and click the **Next** button in the lower right corner of the browser window to proceed.
 
-    ![CodeStar 8](images/codestar-8.png)
+    ![CodeStar 7-2](images/codestar-7-2.png)
+
 
 1. Once provisioning is complete, there will be a brief delay as the CodePipeline pipeline executes for the first time.  The pipeline consists of three stages:
 
@@ -88,7 +89,7 @@ Once you've chosen a region, you should deploy all of the resources for this wor
 
     When these stages are complete, an API Gateway **Application endpoint** will appear in the dashboard.
 
-    ![CodeStar 9](images/codestar-9.png)
+    ![CodeStar 9-1](images/codestar-9-1.png)
 
 1. Open the **Application endpoint** in a browser window and confirm the response message to read `{"Output":"Hello World!"}`
 
