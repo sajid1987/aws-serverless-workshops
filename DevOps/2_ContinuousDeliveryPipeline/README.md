@@ -232,7 +232,7 @@ Congratulations, you have used the API to successfully add a Unicorn!  Next, use
 
 1. In the AWS Management Console choose **Services** then select **CodeStar** under Developer Tools.
 
-1. Select the `uni-api` project
+1. Select the project which starts with `uni-api` + your unique participant number.
 
     ![CodeStar Project List](images/codestar-1.png)
 
@@ -325,7 +325,7 @@ Having this testing framework in place ensures that the exact same set of steps 
 
 1. In the AWS Management Console choose **Services** then select **CodeStar** under Developer Tools.
 
-1. Select the `uni-api` project
+1. Select the project which starts with `uni-api` + your unique participant number.
 
     ![CodeStar Project List](images/codestar-1.png)
 

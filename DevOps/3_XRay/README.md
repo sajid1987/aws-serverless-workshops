@@ -72,7 +72,7 @@ In order to tacke [Problem 1: Error Discovery Using X-Ray](#problem-1-error-disc
 
 1. In the AWS Management Console choose **Services** then select **IAM** under Security, Identity & Compliance.
 
-1. Select Role in the left navigation, type `CodeStarWorker-uni-api-Lambda` in the filter text box, and click the Role name link in the Role table.
+1. Select Role in the left navigation, type `CodeStarWorker-uni-api-Lambda` in the filter text box, and click the Role name link in the Role table which has your unique project code (uni-api-+<your Participant number>).
 
     ![Select Role](images/role-1.png)
  
@@ -96,15 +96,10 @@ In order to tacke [Problem 1: Error Discovery Using X-Ray](#problem-1-error-disc
 
     Region| Launch
     ------|-----
-    US East (N. Virginia) | [![Launch Module 3 in us-east-1](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cloudformation-launch-stack-button.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?stackName=Seed-3-XRay&templateURL=https://s3.amazonaws.com/fsd-aws-wildrydes-us-east-1/codestar-template.yml&param_sourceUrl=https://s3.amazonaws.com/fsd-aws-wildrydes-us-east-1/uni-api-3-v2.zip&param_targetProjectId=uni-api&param_targetProjectRegion=us-east-1)
-    US West (N. California) | [![Launch Module 3 in us-west-1](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cloudformation-launch-stack-button.png)](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/create/review?stackName=Seed-3-XRay&templateURL=https://s3.amazonaws.com/fsd-aws-wildrydes-us-west-1/codestar-template.yml&param_sourceUrl=https://s3-us-west-1.amazonaws.com/fsd-aws-wildrydes-us-west-1/uni-api-3-v2.zip&param_targetProjectId=uni-api&param_targetProjectRegion=us-west-1)
-    US West (Oregon) | [![Launch Module 3 in us-west-2](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cloudformation-launch-stack-button.png)](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/create/review?stackName=Seed-3-XRay&templateURL=https://s3.amazonaws.com/fsd-aws-wildrydes-us-west-2/codestar-template.yml&param_sourceUrl=https://s3-us-west-2.amazonaws.com/fsd-aws-wildrydes-us-west-2/uni-api-3-v2.zip&param_targetProjectId=uni-api&param_targetProjectRegion=us-west-2)
     EU (Ireland) | [![Launch Module 3 in eu-west-1](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cloudformation-launch-stack-button.png)](https://console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/create/review?stackName=Seed-3-XRay&templateURL=https://s3.amazonaws.com/fsd-aws-wildrydes-eu-west-1/codestar-template.yml&param_sourceUrl=https://s3-eu-west-1.amazonaws.com/fsd-aws-wildrydes-eu-west-1/uni-api-3-v2.zip&param_targetProjectId=uni-api&param_targetProjectRegion=eu-west-1)
-    EU (Frankfurt) | [![Launch Module 3 in eu-central-1](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cloudformation-launch-stack-button.png)](https://console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/create/review?stackName=Seed-3-XRay&templateURL=https://s3.amazonaws.com/fsd-aws-wildrydes-eu-central-1/codestar-template.yml&param_sourceUrl=https://s3-eu-central-1.amazonaws.com/fsd-aws-wildrydes-eu-central-1/uni-api-3-v2.zip&param_targetProjectId=uni-api&param_targetProjectRegion=eu-central-1)
-    Asia Pacific (Sydney) | [![Launch Module 3 in ap-southeast-2](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cloudformation-launch-stack-button.png)](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-2#/stacks/create/review?stackName=Seed-3-XRay&templateURL=https://s3.amazonaws.com/fsd-aws-wildrydes-ap-southeast-2/codestar-template.yml&param_sourceUrl=https://s3-ap-southeast-2.amazonaws.com/fsd-aws-wildrydes-ap-southeast-2/uni-api-3-v2.zip&param_targetProjectId=uni-api&param_targetProjectRegion=ap-southeast-2)
 
 
-1. The CloudFormation template has been prepopulated with the necessary fields for this module.  No changes are necessary
+1. The CloudFormation template has been prepopulated with the necessary fields for this module. Change 'Stack name' and 'targetRepositoryName' to a unique value by adding your participant number as the suffix. 'targetRepositoryName' should be same as the project name in Module 0_CodeStar.
 
 1. Select the **I acknowledge that AWS CloudFormation might create IAM resources.** checkbox to grant CloudFormation permission to create IAM resources on your behalf
 
@@ -129,6 +124,23 @@ git fetch --all
 git reset --hard origin/master
 ```
 
+Using a text editor, open the `template.yml` file and change each 'FunctionName:' value to a unique value by adding your participant number as the suffix.
+
+> Note: whitespace is important in YAML files.  Please verify that the configuration remains  with the same space indentation as the original template
+.yml file.
+
+1. Using your Git client, add the local changes to the Git index, and commit with a message.  For example:
+
+    ```bash
+    git add -u
+    git commit -m "Made function names unique"
+    ```
+
+1. Using your Git client, push the Git repository updates to the origin.  For example:
+
+    ```bash
+    git push origin
+    ```
 
 
 ### 4. Validate CodePipeline Unicorn API Deployment
@@ -152,7 +164,7 @@ HOW TO test the List Unicorns API (expand for details)
 
 1. In the AWS Management Console choose **Services** then select **CodeStar** under Developer Tools.
 
-1. Select the `uni-api` project
+1. Select the project which starts with `uni-api` + your unique participant number.
 
     ![CodeStar Project List](images/codestar-1.png)
 
@@ -292,7 +304,7 @@ After pushing your changes to the CodeStar project's CodeCommit git repository, 
 
 1. In the AWS Management Console choose **Services** then select **CodeStar** under Developer Tools.
 
-1. Select the `uni-api` project
+1. Select the project which starts with `uni-api` + your unique participant number. 
 
     ![CodeStar Project List](images/codestar-1.png)
 
@@ -310,7 +322,7 @@ After pushing your changes to the CodeStar project's CodeCommit git repository, 
 
 1. In the AWS Management Console choose **Services** then select **CodeStar** under Developer Tools.
 
-1. Select the `uni-api` project
+1. Select the project which starts with `uni-api` + your unique participant number.
 
     ![CodeStar Project List](images/codestar-1.png)
 
@@ -446,7 +458,7 @@ After pushing your changes to the CodeStar project's CodeCommit git repository, 
 
 1. In the AWS Management Console choose **Services** then select **CodeStar** under Developer Tools.
 
-1. Select the `uni-api` project
+1. Select the project which starts with `uni-api` + your unique participant number.
 
     ![CodeStar Project List](images/codestar-1.png)
 
@@ -464,7 +476,7 @@ After pushing your changes to the CodeStar project's CodeCommit git repository, 
 
 1. In the AWS Management Console choose **Services** then select **CodeStar** under Developer Tools.
 
-1. Select the `uni-api` project
+1. Select the project which starts with `uni-api` + your unique participant number.
 
     ![CodeStar Project List](images/codestar-1.png)
 
@@ -517,4 +529,4 @@ Congratulations!  You've used AWS X-Ray to validate your results.
 
 ## Completion
 
-You have successfully integrated AWS X-Ray and demonstrated how it can be used to identify errors, latencies, and aid in  resolution.  In the next [Multiple Environments Module](../4_MultipleEnvironments), you will enhance the pipeline by adding a Beta stage to the pipeline, and incorporate testing in the Beta stage before deploying to Prod.
+You have successfully integrated AWS X-Ray and demonstrated how it can be used to identify errors, latencies, and aid in  resolution.
