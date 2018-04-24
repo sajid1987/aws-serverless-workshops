@@ -199,7 +199,7 @@ After the CloudFormation deploy command completes, you will use the AWS API Gate
 
 1. In the AWS Management Console, click **Services** then select **API Gateway** under Application Services.
 
-1. In the left nav, click on `awscodestar-uni-api-lambda`.
+1. In the left nav, click on `awscodestar-uni-api-<your participant number>-lambda`.
 
 1. From the list of API resources, click on the `PUT` link under the `/{name}` resource.
 

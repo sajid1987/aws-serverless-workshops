@@ -529,4 +529,4 @@ Congratulations!  You've used AWS X-Ray to validate your results.
 
 ## Completion
 
-You have successfully integrated AWS X-Ray and demonstrated how it can be used to identify errors, latencies, and aid in  resolution.
+You have successfully integrated AWS X-Ray and demonstrated how it can be used to identify errors, latencies, and aid in  resolution. Clean up by deleting resources created during the workshop by following instructions in [CleanUp Module](../9_CleanUp).
