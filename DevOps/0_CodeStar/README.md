@@ -32,9 +32,6 @@ This workshop can be deployed in any AWS region that supports the following serv
 This workshop is available in the **Ireland** region only. Please verify that the region is Ireland. If not then please change it by selecting "EU (Ireland)"  from the dropdown at top right hand corner of the AWS console web page.
 
 
-Once you've chosen a region, you should deploy all of the resources for this workshop there. Make sure you select your region from the dropdown in the upper right corner of the AWS Console before getting started.
-
-
 ### 1. Create a CodeStar project
 
 **Goal**: Use the AWS Console to create a CodeStar project called `uni-api` using the **Node.js Lambda Webservice** template.  Use a web browser to confirm that the API Gateway endpoint created by CodeStar returns the message, `{"Output":"Hello World!"}`, in its response.
