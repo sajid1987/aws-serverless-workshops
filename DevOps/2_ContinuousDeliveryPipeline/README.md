@@ -93,7 +93,7 @@ Using a text editor, open the `template.yml` file and append a new **AWS::Server
 > Note: whitespace is important in YAML files.  Please verify that the configuration below is added with the same space indentation as the CloudFormation Resources in the template.yml file.
 
 1. **FunctionName** is `uni-api-update`
-1.a This function name needs to be unique in the account. To make it unique please add your participant number as the suffic to the name.
+1.a This function name needs to be unique in the account. To make it unique please add your participant number as the suffix to the name.
 
 1. **Runtime** is `nodejs6.10`
 
@@ -144,7 +144,7 @@ Using a text editor, open the `template.yml` file and append a new **AWS::Server
 </details>
 <p>
 
-**Before saving 'template.yml' please change each 'FunctionName:' value to a unique value by adding your participant number as the suffice.**
+**Before saving 'template.yml' please change each 'FunctionName:' value to a unique value by adding your participant number as the suffix.**
 
 Now that you've updated the the SAM template with the changes, use Git to commit the changes and push them to remote repository.  This will trigger CodePipeline to build and deploy your changes in AWS.
 
